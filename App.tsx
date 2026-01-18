@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { GameState, UserProgress, Lesson } from './types';
 import { LESSONS, MODULE_TITLE, MODULE_OBJECTIVE, RANKS, QUIZ_QUESTIONS, FUTURE_MODULES, PLATFORM_NAME, LOGO_URL } from './constants';
 import { IconBook, IconCheck, IconLock, IconPlay, IconTrophy, IconFile, IconArrowLeft, IconChevronLeft, IconChevronRight } from './components/Icons';
-import { AITutor } from './components/AITutor';
 
 // Confetti Component
 const Confetti = ({ active }: { active: boolean }) => {
@@ -603,8 +602,6 @@ const App = () => {
                  </div>
              )}
         </div>
-        
-        <AITutor currentContext={activeLesson.title + (mode === 'READING' ? " - Página " + (currentPage + 1) : " - Caderno de Notas")} />
       </div>
     );
   };
